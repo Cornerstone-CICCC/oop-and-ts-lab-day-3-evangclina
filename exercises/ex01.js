@@ -5,6 +5,20 @@ const Stack = require('../lib/Stack')
 
 function calcDistance(a, b) {
   // your code here
+  const tempStack = new Stack()
+  let foundItem1 = false
+  let foundItem2 = false
+
+  while(!students.isEmpty()){
+    const curr = students.pop()
+    if(curr === a){
+      foundItem1 = true
+    } else if(curr === b){
+      foundItem2 = true
+    }
+
+  }
+  
 }
 
 const students = new Stack()
@@ -17,4 +31,4 @@ students.push("Jim")
 const distance = calcDistance("Joe", "Jim")
 console.log(distance) // 3
 const distance2 = calcDistance("Joe", "Jill")
-console.log(distance2) // 2
+// console.log(distance2) // 2

@@ -5,6 +5,21 @@ const Stack = require('../lib/Stack');
 
 function insertAfterTarget(target, newElement) {
   // your code here
+  const tempStack = new Stack()
+
+  while(!stack.isEmpty()){
+    let curr = stack.pop()
+
+    if(curr === target){
+      tempStack.push(newElement)
+    }
+    tempStack.push(curr)
+  }
+
+  while(!tempStack.isEmpty()){
+    stack.push(tempStack.pop())
+  }
+
 }
 
 const stack = new Stack();
@@ -14,4 +29,4 @@ stack.push("C");
 stack.push("D");
 
 insertAfterTarget("B", "X");
-stack.printStack(); // A B X C D
+console.log(stack.printStack()); // A B X C D
